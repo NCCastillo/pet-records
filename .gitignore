@@ -11,3 +11,16 @@
 /log/*
 !/log/.keep
 /tmp
+/config/config.yml
+/config/database.yml
+/public/cache
+/public/stylesheets/compiled
+/public/system/*
+/spec/tmp/*
+/cache
+/capybara*
+/capybara-*.html
+/gems
+/specifications
+
+.DS_Store
