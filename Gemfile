@@ -15,8 +15,12 @@ gem "uglifier", ">= 1.3.0"
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+  gem "guard-bundler", require: false
+  gem "guard-rails", require: false
+  gem "guard-rspec", require: false
   gem "meta_request"
   gem "spring"
+  gem "spring-commands-rspec"
 end
 
 group :test do
