@@ -21,6 +21,7 @@ group :development do
   gem "guard-bundler", require: false
   gem "guard-rails", require: false
   gem "guard-rspec", require: false
+  gem "letter_opener", "~> 1.4", ">= 1.4.1"
   gem "meta_request"
   gem "spring"
   gem "spring-commands-rspec"
@@ -29,7 +30,6 @@ end
 group :test do
   gem "capybara"
   gem "database_cleaner"
-  gem "launchy"
   gem "selenium-webdriver"
   gem "shoulda-matchers"
 end
@@ -37,6 +37,7 @@ end
 group :development, :test do
   gem "factory_girl_rails"
   gem "faker"
+  gem "launchy", "~> 2.4", ">= 2.4.3"
   gem "pry-byebug"
   gem "rspec-rails"
 end
