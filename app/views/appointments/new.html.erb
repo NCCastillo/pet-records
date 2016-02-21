@@ -1,0 +1,10 @@
+<%= semantic_form_for @appointment do |f| %>
+  <%= f.semantic_errors %>
+  <%= f.inputs do %>
+    <%= f.input :description %>
+    <%= f.input :appointment_schedule, as: :datetime_select %>
+  <% end %>
+  <%= f.actions do %>
+    <%= f.action :submit, label: "Add" %>
+  <% end %>
+<% end %>
