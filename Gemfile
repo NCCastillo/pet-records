@@ -19,7 +19,6 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem "guard-bundler", require: false
-  gem "guard-rails", require: false
   gem "guard-rspec", require: false
   gem "letter_opener", "~> 1.4", ">= 1.4.1"
   gem "meta_request"
