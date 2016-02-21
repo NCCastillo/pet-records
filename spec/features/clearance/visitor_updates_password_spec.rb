@@ -1,5 +1,4 @@
 require "rails_helper"
-require "support/features/clearance_helpers"
 
 feature "Visitor updates password" do
   scenario "with valid password" do
