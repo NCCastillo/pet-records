@@ -1,0 +1,13 @@
+#clearance {
+  @include span-columns(6);
+  @include shift(3);
+
+  #{$all-text-inputs} {
+      padding: .75rem 1em;
+      border-radius: 4px;
+  }
+
+  #{$all-buttons} {
+    width: 100%
+  }
+}
