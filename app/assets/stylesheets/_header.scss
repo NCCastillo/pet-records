@@ -1,0 +1,19 @@
+header.navigation {
+  background-color: orange;
+  border-bottom: 1px solid darken(orange, 10);
+  min-height: 60px;
+  width: 100%;
+
+  .navigation-wrapper {
+    @include outer-container;
+  }
+
+  ul {
+    float: right;
+  }
+
+  li {
+    float: left;
+    padding: 10px 10px;
+  }
+}
