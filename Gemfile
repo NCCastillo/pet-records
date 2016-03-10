@@ -8,9 +8,7 @@ gem "pg", "~> 0.15"
 gem "bitters", "~> 1.2"
 gem "bourbon", "~> 4.2", ">= 4.2.6"
 gem "clearance", "~> 1.12", ">= 1.12.1"
-gem "coffee-rails", "~> 4.1.0"
 gem "formtastic", "~> 3.1", ">= 3.1.3"
-gem "jbuilder", "~> 2.0"
 gem "jquery-rails"
 gem "neat", "~> 1.7", ">= 1.7.2"
 gem "sass-rails", "~> 5.0"
@@ -42,6 +40,3 @@ group :development, :test do
   gem "pry-byebug"
   gem "rspec-rails"
 end
-
-
-
