@@ -1,3 +1,22 @@
-.content {
-  @include outer-container;
+body {
+  margin: 0;
+
+  .content {
+    @include outer-container;
+
+    margin-top: 25px;
+  }
+
+  .inline-errors {
+    color: red;
+  }
+
+  li.errors {
+    input[type="text"] {
+      padding: 3px 2px;
+      border: 2px solid red;
+    }
+
+  }
 }
+
