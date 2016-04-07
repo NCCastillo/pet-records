@@ -3,6 +3,9 @@
     <%= f.semantic_errors %>
     <%= f.inputs do %>
       <%= f.input :pet_name %>
+      <%= f.input :owner %>
+      <%= f.input :breed %>
+      <%= f.input :age %>
     <% end %>
     <%= f.actions do %>
       <%= f.action :submit, label: "Add" %>
