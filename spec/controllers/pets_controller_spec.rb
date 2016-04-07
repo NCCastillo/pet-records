@@ -19,12 +19,12 @@ describe PetsController, type: :controller do
     context "with valid attributes" do
       it "creates a pet" do
         expect do
-          post :create, pet: { pet_name: "Lilo Castillo" }
+          post :create, pet: { pet_name: "Lilo Castillo", owner: "Alex Collado"}
         end.to change { Pet.count }.by(1)
       end
 
       it "redirects to root path" do
-        post :create, pet: { pet_name: "Lilo Castillo" }
+        post :create, pet: { pet_name: "Lilo Castillo", owner: "Alex Collado" }
 
         expect(response).to redirect_to root_path
       end
