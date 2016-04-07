@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   resources :pets, only: [:new, :create]
   resources :appointments, only: [:new, :create]
+  resources :veterinarians, only: :new
 end

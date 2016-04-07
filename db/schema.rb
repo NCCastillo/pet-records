@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160407153558) do
+ActiveRecord::Schema.define(version: 20160407170306) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "city"
+    t.string   "zip_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "addresses", ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id", using: :btree
 
   create_table "appointments", force: :cascade do |t|
     t.string   "description"
@@ -39,5 +52,12 @@ ActiveRecord::Schema.define(version: 20160407153558) do
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
+
+  create_table "veterinarians", force: :cascade do |t|
+    t.string   "organization_name"
+    t.string   "vet_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
