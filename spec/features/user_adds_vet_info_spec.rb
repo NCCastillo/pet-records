@@ -11,8 +11,9 @@ feature "User adds veterinary info" do
       fill_in "Address 1", with: "123 Doggy Lane"
       fill_in "Address 2", with: "Unit 1"
       fill_in "City" , with: "Boulder"
-      select "Colorado", from: "State"
+      fill_in "State", with: "CO"
       fill_in "Zip code", with: "80301"
+      click_on "Add"
 
       expect(page).to have_content "Veterinary info added"
     end
