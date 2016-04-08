@@ -4,5 +4,8 @@ class VeterinariansController < ApplicationController
     @veterinarian.build_address
 
   end
+
+  def create
+    redirect_to root_path
   end
 end
