@@ -1,13 +1,12 @@
 class VeterinariansController < ApplicationController
   def new
-    @veterinarian = Veterinarian.new
-    @address = @veterinarian.build_address
+    @veterinarian_form = NewVeterinarianForm.new
   end
 
   def create
-    @veterinarian = Veterinarian.new(vet_params)
+    @veterinarian_form = NewVeterinarianForm.new(new_veterinarian_form_params)
 
-    if @veterinarian.save
+    if @veterinarian_form.save
       redirect_to root_path, notice: "Veterinarian info added"
     else
       render :new
@@ -16,7 +15,14 @@ class VeterinariansController < ApplicationController
 
   private
 
-  def vet_params
-    params.require(:veterinarian).permit(:organization_name)
+  def new_veterinarian_form_params
+    params.require(:new_veterinarian_form).permit(
+      :organization_name,
+      :vet_name,
+      :address_1,
+      :address_2,
+      :city,
+      :state,
+      :zip_code)
   end
 end

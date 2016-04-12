@@ -1,12 +1,16 @@
 <h1> Add New Vet </h1>
 
 <div id="new-vet-container">
-  <%= semantic_form_for @veterinarian do |f| %>
+  <%= semantic_form_for @veterinarian_form, url: veterinarians_path do |f| %>
     <%= f.semantic_errors %>
     <%= f.inputs do %>
       <%= f.input :organization_name %>
       <%= f.input :vet_name %>
-      <%= f.inputs :address_1, :address_2, :city, :state, :zip_code, for: :address, name: "Address" %>
+      <%= f.input :address_1 %>
+      <%= f.input :address_2 %>
+      <%= f.input :city %>
+      <%= f.input :state %>
+      <%= f.input :zip_code %>
     <% end %>
     <%= f.actions do %>
       <%= f.action :submit, label: "Add" %>
