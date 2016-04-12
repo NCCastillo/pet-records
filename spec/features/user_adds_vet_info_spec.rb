@@ -15,7 +15,7 @@ feature "User adds veterinary info" do
       fill_in "Zip code", with: "80301"
       click_on "Add"
 
-      expect(page).to have_content "Veterinary info added"
+      expect(page).to have_content "Veterinarian info added"
     end
   end
 end
