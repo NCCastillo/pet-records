@@ -1,8 +1,8 @@
 require "rails_helper"
 
 feature "User adds veterinary info" do
-  context "with valid attributes" do
-    scenario "sees a successful message" do
+  context "when the form is valid" do
+    scenario "they see a successful message" do
       sign_in
 
       click_on "Add veterinary info"
@@ -18,4 +18,16 @@ feature "User adds veterinary info" do
       expect(page).to have_content "Veterinarian info added"
     end
   end
+
+  context "when the form is invalid" do
+    scenario "the see an error message" do
+      sign_in
+
+      click_on "Add veterinary info"
+      click_on "Add"
+
+      expect(page).to have_content "can't be blank"
+    end
+  end
+
 end
