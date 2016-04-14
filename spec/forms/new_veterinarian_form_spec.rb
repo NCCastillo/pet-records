@@ -1,13 +1,19 @@
 require "rails_helper"
 
 describe NewVeterinarianForm do
-  context "responds to attr accessor attributes" do
-    %w(organization_name vet_name address_1 address_2 city state zip_code).each do |attribute|
-      it "returns true for #{attribute.humanize}" do
-        new_veterinarian_form = NewVeterinarianForm.new
+  context "contains the correct attributes" do
+    [:organization_name, :vet_name, :address_1, :address_2, :city, :state, :zip_code].each do |attribute|
+      it "returns #{attribute}" do
+        new_veterinarian_form = NewVeterinarianForm.new(attribute => "A")
 
-        expect(new_veterinarian_form.respond_to?(attribute)).to be true
-        expect(new_veterinarian_form.respond_to?("#{attribute}=")).to be true
+        expect(new_veterinarian_form.send(attribute)).to eq "A"
+      end
+
+      it "updates #{attribute}" do
+        new_veterinarian_form = NewVeterinarianForm.new(attribute => "A")
+        new_veterinarian_form.send("#{attribute}=", "B")
+
+        expect(new_veterinarian_form.send(attribute)).to eq "B"
       end
     end
   end
